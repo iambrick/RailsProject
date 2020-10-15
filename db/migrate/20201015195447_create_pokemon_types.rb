@@ -1,7 +1,7 @@
 class CreatePokemonTypes < ActiveRecord::Migration[6.0]
   def change
     create_table :pokemon_types do |t|
-      t.int :pokemon_number
+      t.integer :pokemon_number
       t.string :type_name
 
       t.timestamps

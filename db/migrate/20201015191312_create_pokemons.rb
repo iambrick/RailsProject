@@ -1,10 +1,10 @@
 class CreatePokemons < ActiveRecord::Migration[6.0]
   def change
     create_table :pokemons do |t|
-      t.int :number
+      t.integer :number
       t.string :name
-      t.int :pokemon_typeID
-      t.int :regionID
+      t.integer :pokemon_typeID
+      t.integer :regionID
 
       t.timestamps
     end
