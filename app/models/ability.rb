@@ -1,5 +1,5 @@
 class Ability < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
-  has_many:Pokemon_Ability
+  has_many:pokemon_abilities
 end
