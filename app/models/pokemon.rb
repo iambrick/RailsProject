@@ -1,8 +1,7 @@
 class Pokemon < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  validates :pokemonName, presence: true, uniqueness: true
   validates :number, presence: true, uniqueness: true
 
-  belongs_to:region
-  belongs_to:ability
-  belongs_to:type
+  has_many :abilities, through: :pokemon_abilities
+  belongs_to :region
 end

@@ -199,7 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
+  bootsnap (>= 1.4.3)
   byebug
   capybara (>= 2.15)
   jbuilder (~> 2.7)
