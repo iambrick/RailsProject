@@ -1,0 +1,5 @@
+<h3>Search Results</h3>
+
+<% @results.each do |result| %>
+  <p><%= link_to result.pokemonName, result %></p>
+<% end %>
