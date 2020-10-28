@@ -1,0 +1,9 @@
+<html>
+  <p><strong>Type Index</strong></p>
+
+  <ul>
+    <% @types.each do |type| %>
+      <li><%= link_to type.name, type %></li>
+    <% end %>
+  </ul>
+</html>
