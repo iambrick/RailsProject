@@ -1,5 +1,5 @@
 
-  <h2>Pokemon in the <%= @region.name %> Region</h2>
+  <h2>Pokemon in the <strong><%= @region.name %></strong> Region</h2>
   <ul>
     <% @pokemons.each do |pokemon| %>
       <li><%= link_to pokemon.pokemonName, pokemon %></li>
