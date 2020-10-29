@@ -1,3 +1,8 @@
 <html>
-  <h2><%= @type.name %></h2>
+  <h2><%= @type.name %> Pokemon</h2>
+  <ul>
+    <% @pokemons.each do |pokemon| %>
+      <li><%= link_to pokemon.pokemonName, pokemon %></li>
+    <% end %>
+  </ul>
 </html>
