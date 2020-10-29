@@ -1,3 +1,5 @@
 <html>
-  <h2><%= @pokemon.pokemonName %></h2>
+  <h2><%= @pokemon.number %> - <%= @pokemon.pokemonName %></h2>
+  <p><strong><%= link_to @pokemon.region.name, "../regions/#{@pokemon.region_id}" %></strong> Region</p>
+  <p><strong><%= @pokemon.type1 %> <%= @pokemon.type2 %></strong></p>
 </html>
