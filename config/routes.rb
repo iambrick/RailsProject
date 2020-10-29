@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get '/', to: redirect('/about')
   resources :pokemons, only: [:index, :show]
   resources :regions, only: [:index, :show]
   resources :types, only: [:index, :show]
