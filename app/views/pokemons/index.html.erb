@@ -1,9 +1,10 @@
-<html>
-  <p><strong>Pokemon Index</strong></p>
+<p><strong>Pokemon Index</strong></p>
 
-  <ul>
-    <% @pokemons.each do |pokemon| %>
-      <li><%= link_to pokemon.pokemonName, pokemon %> belongs to <%= pokemon.region.name %></li>
-    <% end %>
-  </ul>
-</html>
+<ul>
+  <% @pokemons.each do |pokemon| %>
+    <li><%= link_to pokemon.pokemonName, pokemon %> belongs to <%= pokemon.region.name %></li>
+  <% end %>
+</ul>
+<div>
+  <p><%= link_to "First", pokemons_path(page: 0) %>  |  <%= link_to "Previous", pokemons_path(page: @page - 1) %>  |  <%= link_to "Next", pokemons_path(page: @page + 1) %>  |  <%= link_to "Last", pokemons_path(page: 40) %></p>
+</div>
