@@ -1,34 +1,37 @@
 <h3>Search Results</h3>
-
-<% if @pokemonResults.present? %>
-  <h2>Pokemon:</h2>
-  <ul>
-    <% @pokemonResults.each do |result| %>
-    <li><%= link_to result.pokemonName, result %></li>
-    <% end %>
-  </ul>
-<% end %>
-<% if @regionResults.present? %>
-  <h2>Regions:</h2>
-  <ul>
-    <% @regionResults.each do |result| %>
-    <li><%= link_to result.name, result %></li>
-    <% end %>
-  </ul>
-<% end %>
-<% if @typeResults.present? %>
-  <h2>Types:</h2>
-  <ul>
-    <% @typeResults.each do |result| %>
-    <li><%= link_to result.name, result %></li>
-    <% end %>
-  </ul>
-<% end %>
-<% if @abilityResults.present? %>
-  <h2>Abilities:</h2>
-  <ul>
-    <% @abilityResults.each do |result| %>
-    <li><%= link_to result.abilityName, result %></li>
-    <% end %>
-  </ul>
+<% if params[:search].blank? || @allEmpty %>
+<h2>Your search returned no results.</h2>
+<% else %>
+  <% if @pokemonResults.present? %>
+    <h2>Pokemon:</h2>
+    <ul>
+      <% @pokemonResults.each do |result| %>
+      <li><%= link_to result.pokemonName, result %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @regionResults.present? %>
+    <h2>Regions:</h2>
+    <ul>
+      <% @regionResults.each do |result| %>
+      <li><%= link_to result.name, result %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @typeResults.present? %>
+    <h2>Types:</h2>
+    <ul>
+      <% @typeResults.each do |result| %>
+      <li><%= link_to result.name, result %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @abilityResults.present? %>
+    <h2>Abilities:</h2>
+    <ul>
+      <% @abilityResults.each do |result| %>
+      <li><%= link_to result.abilityName, result %></li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>
