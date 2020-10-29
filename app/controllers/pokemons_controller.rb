@@ -8,5 +8,10 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
+    @abilities = []
+    @pokeAbilities = PokemonAbility.where("pokemonName LIKE :name", name: @pokemon.number)
+    @pokeAbilities.each do |thing|
+      @abilities.push(Ability.where("id = :id", id: thing.abilityName))
+    end
   end
 end
