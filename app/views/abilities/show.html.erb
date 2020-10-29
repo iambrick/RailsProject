@@ -1,8 +1,8 @@
-  <h2><strong><%= @ability.abilityName %></strong></h2>
+  <h2>Pokemon that can have the <strong><%= @ability.abilityName %></strong> ability.</h2>
   <ul>
     <% @pokemons.each do |pokemon| %>
         <% pokemon.each do |thing| %>
-          <li> <%= thing.pokemonName %></li>
+          <li> <%= link_to thing.pokemonName, thing %></li>
         <%end%>
       <%end%>
   </ul>

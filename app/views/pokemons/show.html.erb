@@ -1,11 +1,11 @@
   <h2><%= @pokemon.number %> - <%= @pokemon.pokemonName %></h2>
   <p><strong><%= link_to @pokemon.region.name, "../regions/#{@pokemon.region_id}" %></strong> Region</p>
-  <p><strong><%= @pokemon.type1 %> <%= @pokemon.type2 %></strong></p>
+  <p><strong><%= @pokemon.type1 %>  |  <%= @pokemon.type2 %></strong></p>
   <div>
     <ul>
       <% @abilities.each do |ability| %>
         <% ability.each do |thing| %>
-          <li> <%= thing.abilityName %></li>
+          <li> <%= link_to thing.abilityName, thing %></li>
         <%end%>
       <%end%>
     </ul>
