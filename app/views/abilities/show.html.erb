@@ -1,6 +1,8 @@
-  <h2><%= @ability.abilityName %></h2>
+  <h2><strong><%= @ability.abilityName %></strong></h2>
   <ul>
-    <% @pokemonAbilities.each do |pokemon| %>
-      <li><%= pokemon.pokemonName %></li>
-    <% end %>
+    <% @pokemons.each do |pokemon| %>
+        <% pokemon.each do |thing| %>
+          <li> <%= thing.pokemonName %></li>
+        <%end%>
+      <%end%>
   </ul>
