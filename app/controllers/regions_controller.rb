@@ -5,5 +5,6 @@ class RegionsController < ApplicationController
 
   def show
     @region = Region.find(params[:id])
+    @pokemons = Pokemon.where("region_id = :id", id: @region.id)
   end
 end
